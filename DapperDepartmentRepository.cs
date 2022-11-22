@@ -17,6 +17,11 @@ namespace IntroSQL
             _connection = connection;
         }
 
+        public void DeleteDepartment(int DepartmentID)
+        {
+            _connection.Execute($"DELETE FROM departments WHERE DepartmentID = {DepartmentID}");
+        }
+
         public IEnumerable<Department> GetAllDepartments()
         {
             return _connection.Query<Department>("SELECT * FROM Departments;");
@@ -27,5 +32,9 @@ namespace IntroSQL
              new { departmentName = newDepartmentName });
         }
 
+        public void InsertDepartment()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

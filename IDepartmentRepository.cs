@@ -12,9 +12,11 @@ namespace IntroSQL
     {
         IEnumerable<Department> GetAllDepartments();
 
-        public void InsertDepartment()
-        {
-           
-        }
+        public void InsertDepartment();
+      
+        public void DeleteDepartment(int DepartmentID);
+
+
+     
     }
 }
